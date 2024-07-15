@@ -13,6 +13,9 @@
 		E9FEE2782C45411900FBF11B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E9FEE2772C45411900FBF11B /* Base */; };
 		E9FEE27A2C45411900FBF11B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FEE2792C45411900FBF11B /* Assets.xcassets */; };
 		E9FEE27D2C45411900FBF11B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E9FEE27C2C45411900FBF11B /* Base */; };
+		E9FEE2852C45502B00FBF11B /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE2842C45502B00FBF11B /* Petition.swift */; };
+		E9FEE2872C45512500FBF11B /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE2862C45512500FBF11B /* Petitions.swift */; };
+		E9FEE2892C455D0300FBF11B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEE2882C455D0300FBF11B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E9FEE2792C45411900FBF11B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9FEE27C2C45411900FBF11B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9FEE27E2C45411900FBF11B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FEE2842C45502B00FBF11B /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
+		E9FEE2862C45512500FBF11B /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		E9FEE2882C455D0300FBF11B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,8 @@
 		E9FEE2642C45411900FBF11B = {
 			isa = PBXGroup;
 			children = (
+				E9FEE2842C45502B00FBF11B /* Petition.swift */,
+				E9FEE2862C45512500FBF11B /* Petitions.swift */,
 				E9FEE26F2C45411900FBF11B /* Project7 */,
 				E9FEE26E2C45411900FBF11B /* Products */,
 			);
@@ -59,6 +67,7 @@
 				E9FEE2702C45411900FBF11B /* AppDelegate.swift */,
 				E9FEE2722C45411900FBF11B /* SceneDelegate.swift */,
 				E9FEE2742C45411900FBF11B /* ViewController.swift */,
+				E9FEE2882C455D0300FBF11B /* DetailViewController.swift */,
 				E9FEE2762C45411900FBF11B /* Main.storyboard */,
 				E9FEE2792C45411900FBF11B /* Assets.xcassets */,
 				E9FEE27B2C45411900FBF11B /* LaunchScreen.storyboard */,
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9FEE2752C45411900FBF11B /* ViewController.swift in Sources */,
+				E9FEE2852C45502B00FBF11B /* Petition.swift in Sources */,
 				E9FEE2712C45411900FBF11B /* AppDelegate.swift in Sources */,
+				E9FEE2892C455D0300FBF11B /* DetailViewController.swift in Sources */,
 				E9FEE2732C45411900FBF11B /* SceneDelegate.swift in Sources */,
+				E9FEE2872C45512500FBF11B /* Petitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
