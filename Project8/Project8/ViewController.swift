@@ -14,6 +14,15 @@ class ViewController: UIViewController {
     var currentAnswer: UITextField!
     var scoreLabel: UILabel!
     var letterButtons = [UIButton]()
+    var activatedButtons = [UIButton]()
+    var solutions = [String]()
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
+        
+    var level = 1
     
     override func loadView() {
         view = UIView()
@@ -65,6 +74,10 @@ class ViewController: UIViewController {
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(buttonsView)
         
+        submit.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
+        clear.addTarget(self, action: #selector(clearTapped), for: .touchUpInside)
+        
+        
         NSLayoutConstraint.activate([
             scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 20),
             scoreLabel.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
@@ -94,8 +107,8 @@ class ViewController: UIViewController {
         let buttonWidth = 150
         let buttonHeight = 80
         
-        for i in 0...3 {
-            for j in 0...4 {
+        for i in 0 ..< 4 {
+            for j in 0 ..< 5 {
                 let button = UIButton(type: .system)
                 
                 button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
@@ -104,6 +117,11 @@ class ViewController: UIViewController {
                 
                 let frame = CGRect(x: j * buttonWidth, y: i * buttonHeight, width: buttonWidth, height: buttonHeight)
                 button.frame = frame
+                
+                button.layer.borderColor = UIColor.gray.cgColor
+                button.layer.borderWidth = 1
+                
+                button.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
                 buttonsView.addSubview(button)
                 letterButtons.append(button)
             }
@@ -112,7 +130,126 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        loadLevel()
+    }
+    
+    func loadLevel(){
+        var clueString = ""
+        var solutionString = ""
+        var letterBits = [String]()
+        
+        if let levelFileURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") {
+            if let levelContents = try? String(contentsOf: levelFileURL){
+                var lines = levelContents.components(separatedBy: "\n")
+                lines.shuffle()
+                
+                for (index, line) in lines.enumerated() {
+                    let parts = line.components(separatedBy: ": ")
+                    let answer = parts[0]
+                    let clue = parts[1]
+                    
+                    clueString += "\(index + 1). \(clue)\n"
+                    
+                    let solutionWord = answer.replacingOccurrences(of: "|", with: "")
+                    solutionString += "\(solutionWord.count) letters\n"
+                    solutions.append(solutionWord)
+
+                    let bits = answer.components(separatedBy: "|")
+                    letterBits += bits
+                }
+            }
+        }
+        
+        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
+        answersLabel.text = solutionString.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        letterBits.shuffle()
+        
+        if letterBits.count == letterButtons.count {
+            for i in 0 ..< letterButtons.count {
+                letterButtons[i].setTitle(letterBits[i], for: .normal)
+            }
+        }
+    }
+    
+    @objc func submitTapped(_ sender: UIButton){
+        guard let answerText = currentAnswer.text else { return }
+        
+        if let solutionPosition = solutions.firstIndex(of: answerText){
+            activatedButtons.removeAll()
+            
+            var splitAnswers = answersLabel.text?.components(separatedBy: "\n")
+                    splitAnswers?[solutionPosition] = answerText
+                    answersLabel.text = splitAnswers?.joined(separator: "\n")
+
+                    currentAnswer.text = ""
+                    score += 1
+
+            if score > 4 {
+                let ac = UIAlertController(title: "Well done!", message: "Are you ready for the next level?", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Let's go!", style: .default, handler: levelUp))
+                present(ac, animated: true)
+            } else if score < 0 {
+                let ac = UIAlertController(title: "You lost!", message: "You should try again!", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: resetLevel))
+                
+            }
+        } else {
+            let fail = UIAlertController(title: "Bzzt ❌", message: "Try again!", preferredStyle: .alert)
+            fail.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: failCancel))
+            present(fail, animated: true)
+        }
+    }
+    
+    @objc func levelUp(action: UIAlertAction){
+        solutions.removeAll(keepingCapacity: true)
+        level += 1
+        score = 0
+        loadLevel()
+        
+        for btn in letterButtons {
+            btn.titleLabel?.textColor = btn.titleColor(for: .normal)
+            btn.isEnabled = true
+        }
+    }
+    
+    @objc func resetLevel(action: UIAlertAction){
+        solutions.removeAll(keepingCapacity: true)
+        loadLevel()
+        
+        for btn in letterButtons {
+            btn.titleLabel?.textColor = btn.titleColor(for: .normal)
+            btn.isEnabled = true
+        }
+    }
+    
+    @objc func failCancel(action: UIAlertAction){
+        score -= 1
+        
+        if score < 0 {
+            
+        }
+        clearTapped()
+    }
+    
+    @objc func clearTapped(){
+        currentAnswer.text = ""
+        
+        for btn in activatedButtons {
+            btn.titleLabel?.textColor = btn.titleColor(for: .normal)
+            btn.isEnabled = true
+        }
+        
+        activatedButtons.removeAll()
+    }
+    
+    @objc func letterTapped(_ sender: UIButton){
+        guard let buttonText = sender.titleLabel?.text else { return }
+        currentAnswer.text = currentAnswer.text?.appending(buttonText)
+        activatedButtons.append(sender)
+        sender.titleLabel?.textColor = .lightGray
+        sender.isEnabled = false
     }
 
 
