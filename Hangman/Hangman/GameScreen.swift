@@ -12,7 +12,6 @@ class GameScreen: UIViewController {
     //Initializing all the views
     var scoreLabel: UILabel!
     var trialsLabel: UILabel!
-    var lifeView: UIImageView!
     var backgroundLifeView: UIImageView!
     var currentWord: UILabel!
     var buttonsView: UIView!
@@ -29,7 +28,7 @@ class GameScreen: UIViewController {
     
     var trials = 10 {
         didSet {
-            trialsLabel.text = "\(trials) remaining"
+            trialsLabel.text = "\(trials) trials remaining"
         }
     }
     var solution = "adam'5"
@@ -46,25 +45,23 @@ class GameScreen: UIViewController {
         
         scoreLabel = UILabel()
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        scoreLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
         scoreLabel.textAlignment = .center
         scoreLabel.text = "0 points"
         view.addSubview(scoreLabel)
         
         backgroundLifeView = UIImageView()
         backgroundLifeView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundLifeView.setContentHuggingPriority(.dragThatCanResizeScene, for: .vertical)
         let backgroundPath = Bundle.main.path(forResource: "startpaper", ofType: "jpg")
         backgroundLifeView.image = UIImage(contentsOfFile: backgroundPath!)
-        backgroundLifeView.contentMode = .scaleAspectFit
+        backgroundLifeView.contentMode = .scaleAspectFill
+        backgroundLifeView.clipsToBounds = true
         view.addSubview(backgroundLifeView)
-        
-        lifeView = UIImageView()
-        lifeView.translatesAutoresizingMaskIntoConstraints = false
-        lifeView.contentMode = .scaleAspectFit
-        backgroundLifeView.addSubview(lifeView)
         
         currentWord = UILabel()
         currentWord.translatesAutoresizingMaskIntoConstraints = false
-        currentWord.text = "_ _ _ _ _ _"
+        currentWord.text = "READY?"
         currentWord.font = UIFont.systemFont(ofSize: 40)
         view.addSubview(currentWord)
         
@@ -83,20 +80,20 @@ class GameScreen: UIViewController {
             scoreLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scoreLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             trialsLabel.centerXAnchor.constraint(equalTo: scoreLabel.centerXAnchor),
-            trialsLabel.topAnchor.constraint(equalTo: backgroundLifeView.bottomAnchor, constant: 10),
-            currentWord.topAnchor.constraint(equalTo: trialsLabel.bottomAnchor, constant: 20),
+            trialsLabel.topAnchor.constraint(equalTo: backgroundLifeView.bottomAnchor),
+            trialsLabel.bottomAnchor.constraint(equalTo: currentWord.topAnchor),
+            currentWord.topAnchor.constraint(equalTo: trialsLabel.bottomAnchor),
             currentWord.centerXAnchor.constraint(equalTo: scoreLabel.centerXAnchor),
+            currentWord.bottomAnchor.constraint(equalTo: buttonsView.topAnchor),
             buttonsView.centerXAnchor.constraint(equalTo: scoreLabel.centerXAnchor),
             buttonsView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor),
             buttonsView.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor),
             buttonsView.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.5),
             backgroundLifeView.centerXAnchor.constraint(equalTo: scoreLabel.centerXAnchor),
-            backgroundLifeView.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 20),
-            backgroundLifeView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1),
-            backgroundLifeView.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.35),
-            lifeView.centerXAnchor.constraint(equalTo: backgroundLifeView.centerXAnchor),
-            lifeView.centerYAnchor.constraint(equalTo: backgroundLifeView.centerYAnchor),
-            lifeView.widthAnchor.constraint(equalTo: backgroundLifeView.widthAnchor, multiplier: 0.8)
+            backgroundLifeView.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
+            backgroundLifeView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+            backgroundLifeView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.3),
+            backgroundLifeView.bottomAnchor.constraint(equalTo: trialsLabel.topAnchor)
         ])
         DispatchQueue.global(qos: .default).async {
             if let path = Bundle.main.url(forResource: "alphabet", withExtension: "txt") {
@@ -275,9 +272,7 @@ class GameScreen: UIViewController {
         }
         
         let ac = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Try Again", style: .cancel) { [weak self] _ in
-            self!.loadLevel()
-        })
+        ac.addAction(UIAlertAction(title: "Try Again", style: .cancel, handler: fetchRandomWord))
         present(ac, animated: true)
     }
 }
