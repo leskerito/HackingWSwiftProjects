@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91DB6F42C4BE0E8001650F5 /* startpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E91DB6F32C4BE0E8001650F5 /* startpaper.jpg */; };
+		E93E624F2C491E090010D381 /* alphabet.txt in Resources */ = {isa = PBXBuildFile; fileRef = E93E624E2C491E090010D381 /* alphabet.txt */; };
+		E93E62572C495E670010D381 /* rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = E93E62562C495E670010D381 /* rules.txt */; };
+		E93E62592C49613A0010D381 /* randomWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E62582C49613A0010D381 /* randomWord.swift */; };
 		E957DE962C4803120069B6F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957DE952C4803120069B6F4 /* AppDelegate.swift */; };
 		E957DE982C4803120069B6F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957DE972C4803120069B6F4 /* SceneDelegate.swift */; };
-		E957DE9A2C4803120069B6F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957DE992C4803120069B6F4 /* ViewController.swift */; };
+		E957DE9A2C4803120069B6F4 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957DE992C4803120069B6F4 /* GameScreen.swift */; };
 		E957DE9D2C4803120069B6F4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E957DE9C2C4803120069B6F4 /* Base */; };
 		E957DE9F2C4803130069B6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E957DE9E2C4803130069B6F4 /* Assets.xcassets */; };
 		E957DEA22C4803130069B6F4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E957DEA12C4803130069B6F4 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91DB6F32C4BE0E8001650F5 /* startpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startpaper.jpg; sourceTree = SOURCE_ROOT; };
+		E93E624E2C491E090010D381 /* alphabet.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = alphabet.txt; sourceTree = "<group>"; };
+		E93E62562C495E670010D381 /* rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rules.txt; path = ../../rules.txt; sourceTree = "<group>"; };
+		E93E62582C49613A0010D381 /* randomWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomWord.swift; sourceTree = "<group>"; };
 		E957DE922C4803120069B6F4 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E957DE952C4803120069B6F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E957DE972C4803120069B6F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E957DE992C4803120069B6F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E957DE992C4803120069B6F4 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
 		E957DE9C2C4803120069B6F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E957DE9E2C4803130069B6F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E957DEA12C4803130069B6F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +48,7 @@
 		E957DE892C4803120069B6F4 = {
 			isa = PBXGroup;
 			children = (
+				E93E624E2C491E090010D381 /* alphabet.txt */,
 				E957DE942C4803120069B6F4 /* Hangman */,
 				E957DE932C4803120069B6F4 /* Products */,
 			);
@@ -58,11 +67,14 @@
 			children = (
 				E957DE952C4803120069B6F4 /* AppDelegate.swift */,
 				E957DE972C4803120069B6F4 /* SceneDelegate.swift */,
-				E957DE992C4803120069B6F4 /* ViewController.swift */,
+				E957DE992C4803120069B6F4 /* GameScreen.swift */,
+				E93E62582C49613A0010D381 /* randomWord.swift */,
 				E957DE9B2C4803120069B6F4 /* Main.storyboard */,
 				E957DE9E2C4803130069B6F4 /* Assets.xcassets */,
 				E957DEA02C4803130069B6F4 /* LaunchScreen.storyboard */,
 				E957DEA32C4803130069B6F4 /* Info.plist */,
+				E93E62562C495E670010D381 /* rules.txt */,
+				E91DB6F32C4BE0E8001650F5 /* startpaper.jpg */,
 			);
 			path = Hangman;
 			sourceTree = "<group>";
@@ -125,9 +137,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93E62572C495E670010D381 /* rules.txt in Resources */,
 				E957DE9F2C4803130069B6F4 /* Assets.xcassets in Resources */,
+				E91DB6F42C4BE0E8001650F5 /* startpaper.jpg in Resources */,
 				E957DEA22C4803130069B6F4 /* Base in Resources */,
 				E957DE9D2C4803120069B6F4 /* Base in Resources */,
+				E93E624F2C491E090010D381 /* alphabet.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E957DE9A2C4803120069B6F4 /* ViewController.swift in Sources */,
+				E93E62592C49613A0010D381 /* randomWord.swift in Sources */,
+				E957DE9A2C4803120069B6F4 /* GameScreen.swift in Sources */,
 				E957DE962C4803120069B6F4 /* AppDelegate.swift in Sources */,
 				E957DE982C4803120069B6F4 /* SceneDelegate.swift in Sources */,
 			);

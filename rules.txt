@@ -1,0 +1,23 @@
+The Hangman
+
+Objective
+
+The goal of Hangman is for one player (the guesser) to correctly guess a hidden word, one letter at a time, before a certain number of incorrect guesses are made.
+
+Correct Guess
+
+    If the guessed letter is in the word, the host fills in the blanks with the correct letter in the correct positions.
+    The guesser can continue guessing letters.
+
+Incorrect Guess
+
+    If the guessed letter is not in the word, the host draws one part of the stick figure on the gallows.
+    The number of allowed incorrect guesses typically equals the number of parts in the stick figure (commonly 6: head, body, left arm, right arm, left leg, right leg).
+
+Winning
+
+    The guesser wins if they successfully guess all the letters in the word before the stick figure is fully drawn.
+
+Losing
+
+    The guesser loses if the stick figure is fully drawn before they guess the entire word.
