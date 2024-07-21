@@ -18,6 +18,7 @@ class GameScreen: UIViewController {
     let primaryColor = UIColor(red: 0.45, green: 0.66, blue: 0.51, alpha: 1.00)
     let backgroundColor = UIColor(red: 0.22, green: 0.24, blue: 0.23, alpha: 1.00)
     let textColor = UIColor(red: 0.89, green: 0.97, blue: 0.88, alpha: 1.00)
+    static let backgroundPath = Bundle.main.path(forResource: "startpaper", ofType: "jpg")
     
     //Initializing all the logical elements
     var score = 0 {
@@ -41,6 +42,10 @@ class GameScreen: UIViewController {
         
         super.loadView()
         
+        if let nc = self.navigationController {
+            nc.isNavigationBarHidden = true
+        }
+        
         view.backgroundColor = backgroundColor
         
         scoreLabel = UILabel()
@@ -53,8 +58,7 @@ class GameScreen: UIViewController {
         backgroundLifeView = UIImageView()
         backgroundLifeView.translatesAutoresizingMaskIntoConstraints = false
         backgroundLifeView.setContentHuggingPriority(.dragThatCanResizeScene, for: .vertical)
-        let backgroundPath = Bundle.main.path(forResource: "startpaper", ofType: "jpg")
-        backgroundLifeView.image = UIImage(contentsOfFile: backgroundPath!)
+        backgroundLifeView.image = UIImage(contentsOfFile: GameScreen.backgroundPath!)
         backgroundLifeView.contentMode = .scaleAspectFill
         backgroundLifeView.clipsToBounds = true
         view.addSubview(backgroundLifeView)
@@ -266,7 +270,7 @@ class GameScreen: UIViewController {
             alertMessage = "You found \(solution). Wanna try again?"
             level += 1
         } else {
-            alertTitle = "Too bad."
+            alertTitle = "The word was \(solution)!"
             alertMessage = "Better luck next time? You should try again."
             score = 0
         }

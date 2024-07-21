@@ -19,7 +19,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="STC-9w-Tsy" kind="relationship" relationship="rootViewController" id="LGx-De-3xB"/>
+                        <segue destination="j7w-Ux-OIg" kind="relationship" relationship="rootViewController" id="zTk-Ik-BLr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fm-O1-6HG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -40,7 +40,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XF0-Ow-nlP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="-44"/>
+            <point key="canvasLocation" x="1607" y="-44"/>
+        </scene>
+        <!--Start-->
+        <scene sceneID="AfP-2H-mUg">
+            <objects>
+                <viewController id="j7w-Ux-OIg" customClass="Start" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2N2-5g-Fo1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TsA-Do-3Ma"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N3t-Tb-ecN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M4Y-L2-hn7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="711" y="-44"/>
         </scene>
     </scenes>
     <resources>

@@ -8,19 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		E91DB6F42C4BE0E8001650F5 /* startpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E91DB6F32C4BE0E8001650F5 /* startpaper.jpg */; };
+		E91DB6F62C4C3C60001650F5 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91DB6F52C4C3C60001650F5 /* Start.swift */; };
+		E91DB6F82C4C3C85001650F5 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91DB6F72C4C3C85001650F5 /* Rules.swift */; };
+		E91DB6FA2C4C3C9B001650F5 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91DB6F92C4C3C9B001650F5 /* GameOver.swift */; };
+		E91DB6FD2C4C7D9B001650F5 /* SharedProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91DB6FC2C4C7D9B001650F5 /* SharedProperties.swift */; };
+		E91DB6FF2C4C8193001650F5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91DB6FE2C4C8193001650F5 /* Settings.swift */; };
+		E91DB7012C4D2899001650F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91DB7002C4D2899001650F5 /* Main.storyboard */; };
 		E93E624F2C491E090010D381 /* alphabet.txt in Resources */ = {isa = PBXBuildFile; fileRef = E93E624E2C491E090010D381 /* alphabet.txt */; };
 		E93E62572C495E670010D381 /* rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = E93E62562C495E670010D381 /* rules.txt */; };
 		E93E62592C49613A0010D381 /* randomWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E62582C49613A0010D381 /* randomWord.swift */; };
 		E957DE962C4803120069B6F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957DE952C4803120069B6F4 /* AppDelegate.swift */; };
 		E957DE982C4803120069B6F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957DE972C4803120069B6F4 /* SceneDelegate.swift */; };
 		E957DE9A2C4803120069B6F4 /* GameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E957DE992C4803120069B6F4 /* GameScreen.swift */; };
-		E957DE9D2C4803120069B6F4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E957DE9C2C4803120069B6F4 /* Base */; };
 		E957DE9F2C4803130069B6F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E957DE9E2C4803130069B6F4 /* Assets.xcassets */; };
-		E957DEA22C4803130069B6F4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E957DEA12C4803130069B6F4 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E91DB6F32C4BE0E8001650F5 /* startpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startpaper.jpg; sourceTree = SOURCE_ROOT; };
+		E91DB6F52C4C3C60001650F5 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		E91DB6F72C4C3C85001650F5 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		E91DB6F92C4C3C9B001650F5 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
+		E91DB6FC2C4C7D9B001650F5 /* SharedProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProperties.swift; sourceTree = "<group>"; };
+		E91DB6FE2C4C8193001650F5 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E91DB7002C4D2899001650F5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E93E624E2C491E090010D381 /* alphabet.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = alphabet.txt; sourceTree = "<group>"; };
 		E93E62562C495E670010D381 /* rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rules.txt; path = ../../rules.txt; sourceTree = "<group>"; };
 		E93E62582C49613A0010D381 /* randomWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomWord.swift; sourceTree = "<group>"; };
@@ -28,9 +38,7 @@
 		E957DE952C4803120069B6F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E957DE972C4803120069B6F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E957DE992C4803120069B6F4 /* GameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreen.swift; sourceTree = "<group>"; };
-		E957DE9C2C4803120069B6F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E957DE9E2C4803130069B6F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E957DEA12C4803130069B6F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E957DEA32C4803130069B6F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,9 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E91DB6FB2C4C48ED001650F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E91DB6F52C4C3C60001650F5 /* Start.swift */,
+				E91DB6F72C4C3C85001650F5 /* Rules.swift */,
+				E91DB6F92C4C3C9B001650F5 /* GameOver.swift */,
+				E957DE992C4803120069B6F4 /* GameScreen.swift */,
+				E91DB6FE2C4C8193001650F5 /* Settings.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E957DE892C4803120069B6F4 = {
 			isa = PBXGroup;
 			children = (
+				E91DB6FC2C4C7D9B001650F5 /* SharedProperties.swift */,
 				E93E624E2C491E090010D381 /* alphabet.txt */,
 				E957DE942C4803120069B6F4 /* Hangman */,
 				E957DE932C4803120069B6F4 /* Products */,
@@ -65,13 +86,12 @@
 		E957DE942C4803120069B6F4 /* Hangman */ = {
 			isa = PBXGroup;
 			children = (
+				E91DB7002C4D2899001650F5 /* Main.storyboard */,
 				E957DE952C4803120069B6F4 /* AppDelegate.swift */,
 				E957DE972C4803120069B6F4 /* SceneDelegate.swift */,
-				E957DE992C4803120069B6F4 /* GameScreen.swift */,
+				E91DB6FB2C4C48ED001650F5 /* Views */,
 				E93E62582C49613A0010D381 /* randomWord.swift */,
-				E957DE9B2C4803120069B6F4 /* Main.storyboard */,
 				E957DE9E2C4803130069B6F4 /* Assets.xcassets */,
-				E957DEA02C4803130069B6F4 /* LaunchScreen.storyboard */,
 				E957DEA32C4803130069B6F4 /* Info.plist */,
 				E93E62562C495E670010D381 /* rules.txt */,
 				E91DB6F32C4BE0E8001650F5 /* startpaper.jpg */,
@@ -138,10 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E93E62572C495E670010D381 /* rules.txt in Resources */,
+				E91DB7012C4D2899001650F5 /* Main.storyboard in Resources */,
 				E957DE9F2C4803130069B6F4 /* Assets.xcassets in Resources */,
 				E91DB6F42C4BE0E8001650F5 /* startpaper.jpg in Resources */,
-				E957DEA22C4803130069B6F4 /* Base in Resources */,
-				E957DE9D2C4803120069B6F4 /* Base in Resources */,
 				E93E624F2C491E090010D381 /* alphabet.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,31 +174,17 @@
 			files = (
 				E93E62592C49613A0010D381 /* randomWord.swift in Sources */,
 				E957DE9A2C4803120069B6F4 /* GameScreen.swift in Sources */,
+				E91DB6FA2C4C3C9B001650F5 /* GameOver.swift in Sources */,
+				E91DB6F62C4C3C60001650F5 /* Start.swift in Sources */,
 				E957DE962C4803120069B6F4 /* AppDelegate.swift in Sources */,
+				E91DB6FD2C4C7D9B001650F5 /* SharedProperties.swift in Sources */,
+				E91DB6FF2C4C8193001650F5 /* Settings.swift in Sources */,
 				E957DE982C4803120069B6F4 /* SceneDelegate.swift in Sources */,
+				E91DB6F82C4C3C85001650F5 /* Rules.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E957DE9B2C4803120069B6F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E957DE9C2C4803120069B6F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E957DEA02C4803130069B6F4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E957DEA12C4803130069B6F4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E957DEA42C4803130069B6F4 /* Debug */ = {
