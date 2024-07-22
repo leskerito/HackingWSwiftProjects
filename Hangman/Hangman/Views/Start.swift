@@ -9,6 +9,7 @@ import UIKit
 
 class Start: UIViewController {
     
+    var titleLabel: UILabel!
     var startLabel: UILabel!
     var rulesButton: UIButton!
     var settingsButton: UIButton!
@@ -19,16 +20,29 @@ class Start: UIViewController {
         
         super.loadView()
         
-        
-        background = UIImageView(image: UIImage(contentsOfFile: sp.backgroundPath!))
-        background.contentMode = .scaleAspectFit
-        background.clipsToBounds = true
+        if let nc = self.navigationController {
+            nc.isNavigationBarHidden = true
+        }
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(startGame(tapGestureRecognizer:)))
-        background.addGestureRecognizer(gestureRecognizer)
+        view.addGestureRecognizer(gestureRecognizer)
+
+        background = UIImageView()
+        background.image = UIImage(contentsOfFile: sp.backgroundPath!)
+        print(background.image!)
         background.isUserInteractionEnabled = true
+        background.translatesAutoresizingMaskIntoConstraints = false
+        background.contentMode = .scaleToFill
         
         view.addSubview(background)
+        
+        
+        titleLabel = UILabel()
+        titleLabel.text = "The Hangman"
+        titleLabel.textColor = sp.backgroundColor
+        titleLabel.font = UIFont(name: "Avenir Next Ultra Light", size: 50)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleLabel)
         
         startLabel = UILabel()
         startLabel.text = "Tap the screen to start"
@@ -54,8 +68,14 @@ class Start: UIViewController {
         view.addSubview(settingsButton)
         
         NSLayoutConstraint.activate([
-            startLabel.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor),
-            startLabel.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor),
+            background.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            background.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            background.topAnchor.constraint(equalTo: view.topAnchor),
+            background.topAnchor.constraint(equalTo: view.bottomAnchor),
+            titleLabel.centerXAnchor.constraint(equalTo: view.layoutMarginsGuide.centerXAnchor),
+            titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -200),
+            startLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            startLabel.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor, constant: 80),
             rulesButton.centerXAnchor.constraint(equalTo: startLabel.centerXAnchor),
             rulesButton.topAnchor.constraint(equalTo: startLabel.bottomAnchor, constant: 50),
             settingsButton.topAnchor.constraint(equalTo: rulesButton.bottomAnchor),
@@ -68,8 +88,8 @@ class Start: UIViewController {
     }
     
     @objc func showRules(){
-        print("Rules screen should appear")
-        self.navigationController?.pushViewController(Rules(), animated: true)
+        let rules = Rules()
+        present(rules, animated: true)
     }
     
     @objc func showSettings(){

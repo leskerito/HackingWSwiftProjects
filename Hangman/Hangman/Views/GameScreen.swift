@@ -42,9 +42,7 @@ class GameScreen: UIViewController {
         
         super.loadView()
         
-        if let nc = self.navigationController {
-            nc.isNavigationBarHidden = true
-        }
+        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Quit", style: .plain, target: self, action: #selector(mainMenu))
         
         view.backgroundColor = backgroundColor
         
@@ -153,6 +151,11 @@ class GameScreen: UIViewController {
         super.viewDidLoad()
         
         fetchRandomWord(action: UIAlertAction())
+    }
+    
+    @objc func mainMenu(){
+        let start = Start()
+        self.navigationController?.pushViewController(start, animated: true)
     }
     
     func fetchRandomWord(action: UIAlertAction){
