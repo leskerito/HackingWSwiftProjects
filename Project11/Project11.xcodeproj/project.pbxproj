@@ -9,24 +9,52 @@
 /* Begin PBXBuildFile section */
 		E98B587F2C4FD1E3007F88F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98B587E2C4FD1E3007F88F2 /* AppDelegate.swift */; };
 		E98B58812C4FD1E3007F88F2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E98B58802C4FD1E3007F88F2 /* GameScene.sks */; };
-		E98B58832C4FD1E3007F88F2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E98B58822C4FD1E3007F88F2 /* Actions.sks */; };
 		E98B58852C4FD1E3007F88F2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98B58842C4FD1E3007F88F2 /* GameScene.swift */; };
 		E98B58872C4FD1E3007F88F2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98B58862C4FD1E3007F88F2 /* GameViewController.swift */; };
 		E98B588A2C4FD1E3007F88F2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E98B58892C4FD1E3007F88F2 /* Base */; };
 		E98B588C2C4FD1E3007F88F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98B588B2C4FD1E3007F88F2 /* Assets.xcassets */; };
 		E98B588F2C4FD1E3007F88F2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E98B588E2C4FD1E3007F88F2 /* Base */; };
+		E98B58A52C4FD4EC007F88F2 /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E98B58952C4FD4EC007F88F2 /* background@2x.jpg */; };
+		E98B58A62C4FD4EC007F88F2 /* ballBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58962C4FD4EC007F88F2 /* ballBlue@2x.png */; };
+		E98B58A72C4FD4ED007F88F2 /* ballCyan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58972C4FD4EC007F88F2 /* ballCyan@2x.png */; };
+		E98B58A82C4FD4ED007F88F2 /* ballGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58982C4FD4EC007F88F2 /* ballGreen@2x.png */; };
+		E98B58A92C4FD4ED007F88F2 /* ballGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58992C4FD4EC007F88F2 /* ballGrey@2x.png */; };
+		E98B58AA2C4FD4ED007F88F2 /* ballPurple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B589A2C4FD4EC007F88F2 /* ballPurple@2x.png */; };
+		E98B58AB2C4FD4ED007F88F2 /* ballRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B589B2C4FD4EC007F88F2 /* ballRed@2x.png */; };
+		E98B58AC2C4FD4ED007F88F2 /* ballYellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B589C2C4FD4EC007F88F2 /* ballYellow@2x.png */; };
+		E98B58AD2C4FD4ED007F88F2 /* bouncer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B589D2C4FD4EC007F88F2 /* bouncer@2x.png */; };
+		E98B58AE2C4FD4ED007F88F2 /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = E98B589E2C4FD4EC007F88F2 /* FireParticles.sks */; };
+		E98B58AF2C4FD4ED007F88F2 /* slotBaseBad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B589F2C4FD4EC007F88F2 /* slotBaseBad@2x.png */; };
+		E98B58B02C4FD4ED007F88F2 /* slotBaseGood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58A02C4FD4EC007F88F2 /* slotBaseGood@2x.png */; };
+		E98B58B12C4FD4ED007F88F2 /* slotGlowBad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58A12C4FD4EC007F88F2 /* slotGlowBad@2x.png */; };
+		E98B58B22C4FD4ED007F88F2 /* slotGlowGood@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58A22C4FD4EC007F88F2 /* slotGlowGood@2x.png */; };
+		E98B58B32C4FD4ED007F88F2 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = E98B58A32C4FD4EC007F88F2 /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E98B587B2C4FD1E3007F88F2 /* Project11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E98B587E2C4FD1E3007F88F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E98B58802C4FD1E3007F88F2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		E98B58822C4FD1E3007F88F2 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		E98B58842C4FD1E3007F88F2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E98B58862C4FD1E3007F88F2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E98B58892C4FD1E3007F88F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E98B588B2C4FD1E3007F88F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E98B588E2C4FD1E3007F88F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E98B58952C4FD4EC007F88F2 /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
+		E98B58962C4FD4EC007F88F2 /* ballBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballBlue@2x.png"; sourceTree = "<group>"; };
+		E98B58972C4FD4EC007F88F2 /* ballCyan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballCyan@2x.png"; sourceTree = "<group>"; };
+		E98B58982C4FD4EC007F88F2 /* ballGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballGreen@2x.png"; sourceTree = "<group>"; };
+		E98B58992C4FD4EC007F88F2 /* ballGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballGrey@2x.png"; sourceTree = "<group>"; };
+		E98B589A2C4FD4EC007F88F2 /* ballPurple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballPurple@2x.png"; sourceTree = "<group>"; };
+		E98B589B2C4FD4EC007F88F2 /* ballRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballRed@2x.png"; sourceTree = "<group>"; };
+		E98B589C2C4FD4EC007F88F2 /* ballYellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ballYellow@2x.png"; sourceTree = "<group>"; };
+		E98B589D2C4FD4EC007F88F2 /* bouncer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bouncer@2x.png"; sourceTree = "<group>"; };
+		E98B589E2C4FD4EC007F88F2 /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
+		E98B589F2C4FD4EC007F88F2 /* slotBaseBad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slotBaseBad@2x.png"; sourceTree = "<group>"; };
+		E98B58A02C4FD4EC007F88F2 /* slotBaseGood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slotBaseGood@2x.png"; sourceTree = "<group>"; };
+		E98B58A12C4FD4EC007F88F2 /* slotGlowBad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slotGlowBad@2x.png"; sourceTree = "<group>"; };
+		E98B58A22C4FD4EC007F88F2 /* slotGlowGood@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slotGlowGood@2x.png"; sourceTree = "<group>"; };
+		E98B58A32C4FD4EC007F88F2 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +89,36 @@
 			children = (
 				E98B587E2C4FD1E3007F88F2 /* AppDelegate.swift */,
 				E98B58802C4FD1E3007F88F2 /* GameScene.sks */,
-				E98B58822C4FD1E3007F88F2 /* Actions.sks */,
 				E98B58842C4FD1E3007F88F2 /* GameScene.swift */,
 				E98B58862C4FD1E3007F88F2 /* GameViewController.swift */,
 				E98B58882C4FD1E3007F88F2 /* Main.storyboard */,
 				E98B588B2C4FD1E3007F88F2 /* Assets.xcassets */,
 				E98B588D2C4FD1E3007F88F2 /* LaunchScreen.storyboard */,
+				E98B58A42C4FD4EC007F88F2 /* Content */,
 			);
 			path = Project11;
+			sourceTree = "<group>";
+		};
+		E98B58A42C4FD4EC007F88F2 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				E98B58952C4FD4EC007F88F2 /* background@2x.jpg */,
+				E98B58962C4FD4EC007F88F2 /* ballBlue@2x.png */,
+				E98B58972C4FD4EC007F88F2 /* ballCyan@2x.png */,
+				E98B58982C4FD4EC007F88F2 /* ballGreen@2x.png */,
+				E98B58992C4FD4EC007F88F2 /* ballGrey@2x.png */,
+				E98B589A2C4FD4EC007F88F2 /* ballPurple@2x.png */,
+				E98B589B2C4FD4EC007F88F2 /* ballRed@2x.png */,
+				E98B589C2C4FD4EC007F88F2 /* ballYellow@2x.png */,
+				E98B589D2C4FD4EC007F88F2 /* bouncer@2x.png */,
+				E98B589E2C4FD4EC007F88F2 /* FireParticles.sks */,
+				E98B589F2C4FD4EC007F88F2 /* slotBaseBad@2x.png */,
+				E98B58A02C4FD4EC007F88F2 /* slotBaseGood@2x.png */,
+				E98B58A12C4FD4EC007F88F2 /* slotGlowBad@2x.png */,
+				E98B58A22C4FD4EC007F88F2 /* slotGlowGood@2x.png */,
+				E98B58A32C4FD4EC007F88F2 /* spark.png */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,10 +180,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98B58812C4FD1E3007F88F2 /* GameScene.sks in Resources */,
+				E98B58AC2C4FD4ED007F88F2 /* ballYellow@2x.png in Resources */,
+				E98B58AA2C4FD4ED007F88F2 /* ballPurple@2x.png in Resources */,
+				E98B58AB2C4FD4ED007F88F2 /* ballRed@2x.png in Resources */,
+				E98B58A82C4FD4ED007F88F2 /* ballGreen@2x.png in Resources */,
+				E98B58AF2C4FD4ED007F88F2 /* slotBaseBad@2x.png in Resources */,
+				E98B58B32C4FD4ED007F88F2 /* spark.png in Resources */,
+				E98B58B02C4FD4ED007F88F2 /* slotBaseGood@2x.png in Resources */,
 				E98B588A2C4FD1E3007F88F2 /* Base in Resources */,
+				E98B58B22C4FD4ED007F88F2 /* slotGlowGood@2x.png in Resources */,
+				E98B58A72C4FD4ED007F88F2 /* ballCyan@2x.png in Resources */,
+				E98B58A92C4FD4ED007F88F2 /* ballGrey@2x.png in Resources */,
 				E98B588C2C4FD1E3007F88F2 /* Assets.xcassets in Resources */,
-				E98B58832C4FD1E3007F88F2 /* Actions.sks in Resources */,
+				E98B58A52C4FD4EC007F88F2 /* background@2x.jpg in Resources */,
+				E98B58AD2C4FD4ED007F88F2 /* bouncer@2x.png in Resources */,
 				E98B588F2C4FD1E3007F88F2 /* Base in Resources */,
+				E98B58A62C4FD4EC007F88F2 /* ballBlue@2x.png in Resources */,
+				E98B58AE2C4FD4ED007F88F2 /* FireParticles.sks in Resources */,
+				E98B58B12C4FD4ED007F88F2 /* slotGlowBad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,8 +367,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,9 +376,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = adam5.Project11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -330,8 +398,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,9 +407,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = adam5.Project11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
